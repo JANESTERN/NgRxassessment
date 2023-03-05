@@ -12,6 +12,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { bookingReducer } from './State/Reducers/bookingReducer';
 import { BookingsEffect } from './State/Effects/BookingEffects';
 import { ActionsComponent } from './profileuser/actions/actions.component';
+import { ProfileComponent } from './Auth/profile/profile.component';
 
 
 
@@ -19,6 +20,7 @@ import { ActionsComponent } from './profileuser/actions/actions.component';
   declarations: [
     AppComponent,
     ActionsComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,
