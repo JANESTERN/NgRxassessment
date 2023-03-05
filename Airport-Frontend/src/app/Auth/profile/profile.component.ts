@@ -23,7 +23,6 @@ export class ProfileComponent {
 
   ngOnInit(): void {
     this.store.select(selectTheUser).subscribe(user => {
-      this.user = user;
       this.initializeForm();
     });
   }

@@ -13,6 +13,7 @@ import { bookingReducer } from './State/Reducers/bookingReducer';
 import { BookingsEffect } from './State/Effects/BookingEffects';
 import { ActionsComponent } from './profileuser/actions/actions.component';
 import { ProfileComponent } from './Auth/profile/profile.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -28,7 +29,8 @@ import { ProfileComponent } from './Auth/profile/profile.component';
     HttpClientModule,
     StoreModule.forRoot({sample:sampleReducer, counter:CounterReducer, booking:bookingReducer}),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
-    EffectsModule.forRoot([BookingsEffect])
+    EffectsModule.forRoot([BookingsEffect]),
+    ReactiveFormsModule
   ],
   providers: [{provide:HTTP_INTERCEPTORS, useClass:TokenInterceptorService, multi:true}],
   bootstrap: [AppComponent]

@@ -41,7 +41,7 @@ export class LoginComponent implements OnInit {
         this.auth.login();
         localStorage.setItem('token', response.token);
         if (response.token) {
-          this.store.dispatch(loginSuccess({ user: response }));
+          this.store.dispatch(loginSuccess({user:undefined}));
           this.router.navigate(['Book']);
         }
       },
