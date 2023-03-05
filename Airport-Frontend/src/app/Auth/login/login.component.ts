@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
     private authentication: AuthenticationService,
     private auth: AuthService,
     private router: Router,
-    private store: Store<{ user: UserState }>
+    private store: Store<{ user: undefined}>
   ) {}
 
   ngOnInit(): void {
